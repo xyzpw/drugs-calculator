@@ -1,0 +1,31 @@
+body {
+  background-color: #333;
+  color: #ccc;
+}
+input {
+  color: #ccc;
+  background-color: #222;
+  width: 10ch;
+}
+button {
+  background-color: #222;
+  color: #ccc;
+  border-color: transparent;
+  transition: 0.5s;
+}
+button:hover {
+  transform: scale(1.5);
+}
+#btn {
+  margin-top: 20ch;
+}
+select {
+  background-color: #222;
+  color: #ccc;
+}
+#wrapper {
+  position: relative;
+}
+.calculator-divs {
+  position: absolute;
+}
