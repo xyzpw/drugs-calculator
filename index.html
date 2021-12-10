@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="src/style.css"/>
+    <script src="src/script.js"></script>
+  </head>
+  <body>
+    <select id="calculator-type">
+      <option value="half-life">half-life</option>
+      <option value="tmax">tmax</option>
+      <option value="calculate-half-life">calculate half-life</option>
+    </select> <br/> <br/>
+    <div id="wrapper">
+      <!--half-life-->
+      <div id="half-life" class="calculator-divs" style="visibility: visible;">
+        <label>Half-life</label>
+        <input type="number" id="ui-half-life"/>
+        <!--half-life unit select-->
+        <select id="ui-half-life-unit">
+          <option value="hours">Hours</option>
+          <option value="minutes">Minutes</option>
+          <option value="days">Days</option>
+        </select> <br/> <br/>
+        <!--half-life unit select end-->
+        <label>Time after tmax</label>
+        <input type="number" id="ui-time-after-tmax"/>
+        <!--time after tmax unit-->
+        <select id="ui-time-after-tmax-unit">
+          <option value="hours">Hours</option>
+          <option value="minutes">Minutes</option>
+          <option value="days">Days</option>
+        </select> <br/> <br/>
+        <!--time after tmax unit end-->
+        <label>Dose</label>
+        <input id="ui-half-life-dose" type="number"/> <br/> <br/>
+      </div>
+      <!--tmax-->
+      <div id="tmax" class="calculator-divs" style="visibility: hidden;">
+        <label>Absorption half-life</label>
+        <input id="ui-tmax-absorption-half-life" type="number" />
+        <!--absorption half-life unit-->
+        <select id="ui-tmax-absorption-half-life-unit">
+          <option value="hours">Hours</option>
+          <option value="minutes">Minutes</option>
+          <option value="days">Days</option>
+        </select> <br/> <br/>
+        <!--absorption half-life unit end-->
+        <label>Half-life</label>
+        <input id="ui-tmax-half-life" type="number"/>
+        <!--half-life unit-->
+        <select id="ui-tmax-half-life-unit">
+          <option value="hours">Hours</option>
+          <option value="minutes">Minutes</option>
+          <option value="days">Days</option>
+        </select> <br/> <br/>
+        <!--half-life unit end-->
+      </div>
+      <!--calculate half-life-->
+      <div id="calculate-half-life" class="calculator-divs" style="visibility: hidden;">
+        <label>Volume of distribution</label>
+        <input id="ui-calculate-half-life-vd" type="number"/>
+        <select id="ui-calculate-half-life-vd-unit">
+          <option value="l/kg">L/kg</option>
+          <option value="ml/kg">mL/kg</option>
+        </select> <br/> <br/>
+        <label>Clearance rate</label>
+        <input id="ui-calculate-half-life-cl" type="number"/>
+        <select id="ui-calculate-half-life-cl-unit">
+          <option value="l/kg/h">L/kg/h</option>
+          <option value="ml/kg/min">mL/kg/min</option> <br/> <br/>
+        </select>
+      </div>
+    </div>
+    <button id="btn" onclick="calculate();">Calculate</button>
+    <p id="result">Results show here</p>
+  </body>
+</html>
